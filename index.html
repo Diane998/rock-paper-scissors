@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rock, Paper, Scissors Game</h1>
+        <p>The first to get 5 points wins.</p>
+    </header>
+    </div>
+    <div class="player">
+        <p>Player</p>
+        <ul>
+            <li><button id="Rock">
+                <img src="images/rock1.png" alt="rock"></button>
+            </li>
+            <li><button id="Paper">
+                <img src="images/paper1.png" alt="paper"></button>
+            </li>
+            <li><button id="Scissors">
+                <img src="images/scissors1.png" alt="scissors"></buttonv>
+            </li>
+        </ul>
+    </div>
+    <div class="computer">
+        <p>Computer</p>
+        <ul>
+            <li><img src="images/rock2.png" id="rock2" alt="rock"></li>
+            <li><img src="images/paper2.png" id="paper2" alt="paper"></li>
+            <li><img src="images/scissors2.png" id="scissors2" alt="scissors"></li>
+        </ul>
+    </div>
+    <div class="player-vs-computer">
+        <div id="player-hand">
+            <img src="images/rock1.png" alt="player's hand" id="player's hand">
+        </div>
+        <div id="computer-hand">
+            <img src="images/rock2.png" alt="computer's hand" id="computer's hand">
+        </div>
+    </div>
+    <div class="score">
+        <div id="result"></div>
+        <div id="round-winner"></div>
+        <h2>Player: </h2><div id="player-score"></div>
+        <h2>Computer: </h2><div id="computer-score"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
