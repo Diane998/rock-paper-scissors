@@ -1,1 +1,1 @@
-# HTML/CSS/JavaScript project from The Odin Project Curriculum
+# HTML/CSS/JavaScript project for The Odin Project 
