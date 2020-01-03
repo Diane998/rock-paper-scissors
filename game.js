@@ -26,6 +26,7 @@ let computerStaringScore = 0;
 let pScore;
 let cScore;
 let result = document.getElementById("result");
+
 let roundWinner = document.getElementById("round-winner");
 
 const rock = document.getElementById("Rock");
@@ -70,34 +71,35 @@ let playRound = (playerSelection, computerSelection) => {
         case "RockScissors":
         case "ScissorsPaper":
             pScore = parseInt(playerStartingScore += 1);
-            playerScore.innerHTML = pScore;
-            result.innerHTML = playerSelection + " beats " + computerSelection
+            playerScore.textContent = pScore;
+            result.textContent = playerSelection + " beats " + computerSelection
                     + ". You Win!"; 
             break;
         case "PaperScissors":
         case "ScissorsRock":
         case "RockPaper":
             cScore = parseInt(computerStaringScore += 1);
-            computerScore.innerHTML = cScore;
-            result.innerHTML = computerSelection + " beats " + playerSelection
+            computerScore.textContent = cScore;
+            result.textContent = computerSelection + " beats " + playerSelection
                     + ". Computer Wins!";
             break;
         case "RockRock":
         case "PaperPaper":
         case "ScissorsScissors":
-            result.innerHTML = playerSelection + " Vs " + computerSelection
+            result.textContent = playerSelection + " Vs " + computerSelection
                     + ". Draw";
             break; 
     }
 
     if (pScore == 5) {
-        roundWinner.innerHTML = "You won this round!";
-        setTimeout(function() { resetGame(); }, 5000);
+        roundWinner.textContent = "You won this round!";
     } else if (cScore == 5) {
-        roundWinner.innerHTML = "Computer won this round!";
-        setTimeout(function() { resetGame(); }, 5000);
+        roundWinner.textContent = "Computer won this round!";
     }
 };
+
+const reset = document.getElementById('reset-button');
+reset.addEventListener('click', resetGame);
 
 function resetGame() {
     playerStartingScore = 0;
